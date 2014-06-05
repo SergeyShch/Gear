@@ -1,7 +1,7 @@
 ﻿<Root StartX="mouse" StartY="200" Selected="2">
   
   <Root Name="Sites">
-    <WebSite Name="Google" Url="http://google.com"/>
+    <WebSite Name="Google" Url="https://www.google.ru/"/>
   </Root>
 
   <Root Name="RDC">

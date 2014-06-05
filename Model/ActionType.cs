@@ -1,5 +1,8 @@
 ﻿namespace TopTeam.Gear.Model
 {
+    /// <summary>
+    /// Enum of root types
+    /// </summary>
     public enum ActionType
     {
         Root = 0,

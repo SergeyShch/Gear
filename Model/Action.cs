@@ -8,11 +8,18 @@ namespace TopTeam.Gear.Model
     using System.Windows.Forms;
 
     using TopTeam.Gear.Model;
-
+    /// <summary>
+    /// Base abstract class for all actions
+    /// </summary>
     public abstract class Action
     {
+        /// <summary>
+        /// Abstract readonly field from enum ActionType
+        /// </summary>
         public abstract ActionType Type { get; }
-
+        /// <summary>
+        /// Readonly prop, that return name from Dictionary Params or return empty string
+        /// </summary>
         public string Name
         {
             get
@@ -20,20 +27,33 @@ namespace TopTeam.Gear.Model
                 return this.Params.ContainsKey(ActionParam.Name) ? this.Params[ActionParam.Name] : string.Empty;
             }
         }
-
+        /// <summary>
+        /// Public Dictionary(enum, string) prop. 
+        /// </summary>
         public Dictionary<ActionParam, string> Params { get; set; }
 
+        //ctor
         public Action(Dictionary<ActionParam, string> param)
         {
             this.Params = param;
         }
-
+        
+        /// <summary>
+        /// Main abstract method of actions
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected abstract void Execute(object sender, EventArgs e);
-
+        /// <summary>
+        /// Try to call Execute(). Finally call TurnOff() to close the app.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExecuteSafe(object sender, EventArgs e)
         {
             try
             {
+                
                 Program.HandledTurnOFf = true;
                 this.Execute(sender, e);
             }
@@ -51,8 +71,13 @@ namespace TopTeam.Gear.Model
             {
                 Program.TurnOff();
             }
-        }
 
+            
+        }
+        /// <summary>
+        /// Initialize a new ToolStripMenuItem, add Click EventHandler and attach an icon. Can be overridden.
+        /// </summary>
+        /// <returns></returns>
         public virtual ToolStripMenuItem ToMenuItem()
         {
             var item = new ToolStripMenuItem(this.Name);
@@ -61,7 +86,9 @@ namespace TopTeam.Gear.Model
 
             return item;
         }
-
+        /// <summary>
+        /// Readonly prop, that return icon with the same name of a type. Can be overridden. 
+        /// </summary>
         protected virtual Image Icon 
         {
             get

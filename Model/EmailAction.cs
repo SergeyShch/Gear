@@ -8,6 +8,12 @@ namespace TopTeam.Gear.Model
 {
     using System.Diagnostics;
 
+    /// <summary>
+    /// Sends email to given recipients with provided Subject and Body.
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
     internal class EmailAction : Action
     {
         private string Subject
@@ -53,12 +59,19 @@ namespace TopTeam.Gear.Model
                 return this.Params.TryGetValue(ActionParam.Body, out val) ? val : string.Empty;
             }
         }
-
+        /// <summary>
+        /// Constructor that only call a base constructor
+        /// </summary>
+        /// <param name="param"></param>
         public EmailAction(Dictionary<ActionParam, string> param)
             : base(param)
         {
         }
-
+        /// <summary>
+        /// Overrided execute method, that starts the process mailto: with provided optional parameters. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected override void Execute(object sender, EventArgs e)
         {
             string mail = "mailto:" + this.To;
@@ -96,7 +109,9 @@ namespace TopTeam.Gear.Model
 
             Process.Start(mail);
         }
-
+        /// <summary>
+        /// Type of action from enum - Email. 
+        /// </summary>
         public override ActionType Type
         {
             get { return ActionType.Email; }

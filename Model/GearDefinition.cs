@@ -8,7 +8,9 @@ namespace TopTeam.Gear.Model
 {
     using System.Windows.Forms;
     using System.Xml;
-
+    /// <summary>
+    /// Define properties of app
+    /// </summary>
     public class GearDefinition
     {
         private int startX= 150;
@@ -16,12 +18,16 @@ namespace TopTeam.Gear.Model
         private int startY = 150;
 
         private int selectedIndex = 0;
-
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public GearDefinition()
         {
             this.MenuItems = new List<ToolStripItem>();
         }
-
+        /// <summary>
+        /// Get/set x-coordinate of ToolStripItem
+        /// </summary>
         public int StartX
         {
             get
@@ -33,7 +39,9 @@ namespace TopTeam.Gear.Model
                 startX = value;
             }
         }
-
+        /// <summary>
+        /// Get/set y-coordinate of ToolStripItem
+        /// </summary>
         public int StartY
         {
             get
@@ -45,7 +53,9 @@ namespace TopTeam.Gear.Model
                 startY = value;
             }
         }
-
+        /// <summary>
+        /// Get/set selected item in ToolStripItem. Get 0 if it more than count. 
+        /// </summary>
         public int SelectedIndex
         {
             get
@@ -59,7 +69,10 @@ namespace TopTeam.Gear.Model
                 this.selectedIndex = value;
             }
         }
-
+        /// <summary>
+        /// Sets startX from string
+        /// </summary>
+        /// <param name="xS"></param>
         public void SetStartX(string xS)
         {
             int x;
@@ -72,7 +85,10 @@ namespace TopTeam.Gear.Model
                 this.startX = x;
             }
         }
-
+        /// <summary>
+        /// Sets startY from string
+        /// </summary>
+        /// <param name="yS"></param>
         public void SetStartY(string yS)
         {
             int y;
@@ -85,7 +101,10 @@ namespace TopTeam.Gear.Model
                 this.startY = y;
             }
         }
-
+        /// <summary>
+        /// Sets selectedIndex from string
+        /// </summary>
+        /// <param name="indexS"></param>
         public void SetSelectedIndex(string indexS)
         {
             int i;
@@ -96,7 +115,11 @@ namespace TopTeam.Gear.Model
         }
 
         public List<ToolStripItem> MenuItems { get; set; }
-
+        
+        /// <summary>
+        /// Sets startX, startY and selectedIndex from RootNode
+        /// </summary>
+        /// <param name="root"></param>
         public void InitializeFromRootNode(XmlNode root)
         {
             var action = ActionFactory.GetAction(root) as RootAction;

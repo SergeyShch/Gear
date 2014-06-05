@@ -28,12 +28,19 @@ namespace TopTeam.Gear.Model
                 return this.Params.TryGetValue(ActionParam.Args, out val) ? val : string.Empty;
             }
         }
-
+        /// <summary>
+        /// Constructor that only call a base constructor
+        /// </summary>
+        /// <param name="param"></param>
         public ExeAction(Dictionary<ActionParam, string> param)
             : base(param)
         {
         }
-
+        /// <summary>
+        /// Overrided execute method, that starts a process from provided path and optional comand-line args. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected override void Execute(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(this.Args))
@@ -45,7 +52,9 @@ namespace TopTeam.Gear.Model
                 Process.Start(this.Path);
             }
         }
-
+        /// <summary>
+        /// Type of action from enum - Exe. 
+        /// </summary>
         public override ActionType Type
         {
             get { return ActionType.Exe; }

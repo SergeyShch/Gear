@@ -35,17 +35,26 @@ namespace TopTeam.Gear.Model
                 return false;
             }
         }
-
+        /// <summary>
+        /// Constructor that only call a base constructor
+        /// </summary>
+        /// <param name="param"></param>
         public ConsoleAction(Dictionary<ActionParam, string> param)
             : base(param)
         {
         }
-
+        /// <summary>
+        /// Overrided execute method, that starts a process cmd.exe with comand-line args. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected override void Execute(object sender, EventArgs e)
         {
             Process.Start("cmd.exe", string.Format("{0} {1}", this.ShouldCloseWindow ? "/C" : "/K", this.Command));
         }
-
+        /// <summary>
+        /// Type of action from enum - Console. 
+        /// </summary>
         public override ActionType Type
         {
             get

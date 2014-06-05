@@ -12,6 +12,10 @@ namespace TopTeam.Gear.Parsers
 
     public static class Parser
     {
+        /// <summary>
+        /// Trying to read configs from working directory, then from comand line arguments. 
+        /// </summary>
+        /// <returns></returns>
         public static GearDefinition ReadConfigs()
         {
             var gear = new GearDefinition();

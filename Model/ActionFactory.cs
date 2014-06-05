@@ -5,18 +5,26 @@
     using System.Windows.Forms;
     using System.Xml;
     using TopTeam.Gear.Utility;
-
+    /// <summary>
+    /// Contain static method GetAction(), that returns an Action
+    /// </summary>
     public static class ActionFactory
     {
+        
+        /// <summary>
+        /// Static method, that returns an Action
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
         public static Action GetAction(XmlNode node)
         {
             if (node == null)
                 return null;
-
+            
             ActionType actionType;
             if (!Enum.TryParse(node.Name, true, out actionType))
                 return null;
-
+            
             var actionParams = new Dictionary<ActionParam, string>(); 
             if (node.Attributes != null)
             {
@@ -35,7 +43,7 @@
             }
 
             Action action;
-
+            
             switch (actionType)
             {
                 case ActionType.Website:

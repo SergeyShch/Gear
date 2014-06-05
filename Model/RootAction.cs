@@ -34,7 +34,10 @@ namespace TopTeam.Gear.Model
                 return this.Params.TryGetValue(ActionParam.Selected, out val) ? val : string.Empty;
             }
         }
-
+        /// <summary>
+        /// Constructor that only call a base constructor
+        /// </summary>
+        /// <param name="param"></param>
         public RootAction(Dictionary<ActionParam, string> param)
             : base(param)
         {
@@ -49,7 +52,9 @@ namespace TopTeam.Gear.Model
             ToolStripMenuItem item = new ToolStripMenuItem(this.Name);
             return item;
         }
-
+        /// <summary>
+        /// Type of action from enum - Root. 
+        /// </summary>
         public override ActionType Type
         {
             get
