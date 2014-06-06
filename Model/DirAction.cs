@@ -12,6 +12,7 @@ namespace TopTeam.Gear.Model
 
     public class  DirAction : Action
     {
+        private static int quickNumber = 1;
         string Path
         {
             get
@@ -52,6 +53,11 @@ namespace TopTeam.Gear.Model
         public override ActionType Type
         {
             get { return ActionType.Dir; }
+        }
+
+        public override int QuickNumber
+        {
+            get { return DirAction.quickNumber++; }
         }
     }
 }

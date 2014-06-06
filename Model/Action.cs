@@ -13,6 +13,7 @@ namespace TopTeam.Gear.Model
     /// </summary>
     public abstract class Action
     {
+        public abstract int QuickNumber { get; }
         /// <summary>
         /// Abstract readonly field from enum ActionType
         /// </summary>
@@ -20,11 +21,13 @@ namespace TopTeam.Gear.Model
         /// <summary>
         /// Readonly prop, that return name from Dictionary Params or return empty string
         /// </summary>
+        
         public string Name
         {
+            
             get
-            {
-                return this.Params.ContainsKey(ActionParam.Name) ? this.Params[ActionParam.Name] : string.Empty;
+            {                
+                return string.Format("{0}. {1}",1, this.Params.ContainsKey(ActionParam.Name) ? this.Params[ActionParam.Name] : string.Empty);
             }
         }
         /// <summary>

@@ -11,6 +11,7 @@ namespace TopTeam.Gear.Model
 
     public class ExeAction : Action
     {
+        private int quickNumber = 1;
         private string Path
         {
             get
@@ -58,6 +59,11 @@ namespace TopTeam.Gear.Model
         public override ActionType Type
         {
             get { return ActionType.Exe; }
+        }
+
+        public override int QuickNumber
+        {
+            get { return this.quickNumber++; }
         }
     }
 }

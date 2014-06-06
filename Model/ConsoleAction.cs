@@ -11,6 +11,7 @@ namespace TopTeam.Gear.Model
 
     public class ConsoleAction : Action
     {
+        private int quickNumber = 1;
         string Command
         {
             get
@@ -61,6 +62,11 @@ namespace TopTeam.Gear.Model
             {
                 return ActionType.Console;
             }
+        }
+
+        public override int QuickNumber
+        {
+            get { return this.quickNumber++; }
         }
     }
 }

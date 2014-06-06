@@ -8,6 +8,7 @@
 
     public class WebAction : Action
     {
+        private int quickNumber = 0;
         private string Url
         {
             get
@@ -50,6 +51,15 @@
             {
                 return ActionType.Website;
             }
+        }
+
+        public override int QuickNumber
+        {
+            get
+            {
+                return this.quickNumber++;
+            }
+            
         }
     }
 }

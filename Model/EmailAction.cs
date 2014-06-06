@@ -16,6 +16,7 @@ namespace TopTeam.Gear.Model
     /// </remarks>
     internal class EmailAction : Action
     {
+        private int quickNumber = 1;
         private string Subject
         {
             get
@@ -115,6 +116,11 @@ namespace TopTeam.Gear.Model
         public override ActionType Type
         {
             get { return ActionType.Email; }
+        }
+
+        public override int QuickNumber
+        {
+            get { return this.quickNumber++; }
         }
     }
 }

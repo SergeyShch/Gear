@@ -7,12 +7,14 @@ namespace TopTeam.Gear.Model
 {
     public class CopyToClipboardAction : Action
     {
+        private int quickNumber = 1;
         private string Text
         {
             get
             {
                 string val;
                 return this.Params.TryGetValue(ActionParam.Copy, out val) ? val : string.Empty;
+
             }
         }
 
@@ -43,6 +45,15 @@ namespace TopTeam.Gear.Model
             {
                 return ActionType.Copy;
             }
+        }
+
+        public override int QuickNumber
+        {
+            get
+            {
+                return this.quickNumber++;
+            }
+            
         }
     }
 }
