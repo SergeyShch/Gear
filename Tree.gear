@@ -28,4 +28,11 @@
     <Exe Name="Open solution in VS" Path="&quot;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe&quot;" Args="&quot;D:\Open3\Source\AllProjects.sln&quot;" />
   </Root>
 
+  <Root Name="Copy">
+    <Copy Name="GitPass" Copy="qwerty"/>
+    <Copy Name="My Email" Copy="roman.dudin@akvelon.com"/>
+    <Copy Name="My Skype" Copy="roman.dudinn"/>
+    <Copy Name="URL of Gear project at GitHub" Copy="https://github.com/roman-dudin/Gear"/>
+  </Root>
+
 </Root>

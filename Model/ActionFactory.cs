@@ -70,6 +70,10 @@
                     action = new EmailAction(actionParams);
                     break;
 
+                case ActionType.Copy:
+                    action = new CopyToClipboardAction(actionParams);
+                    break;
+
                 default:
                     action = new RootAction(actionParams);
                     break;

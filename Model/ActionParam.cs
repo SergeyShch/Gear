@@ -43,6 +43,8 @@ namespace TopTeam.Gear.Model
 
         StartY = 16,
 
-        Selected = 17
+        Selected = 17,
+
+        Copy = 18
     }
 }

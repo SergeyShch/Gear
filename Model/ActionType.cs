@@ -17,6 +17,8 @@
 
         Console = 6,
 
-        Exe = 7
+        Exe = 7,
+
+        Copy = 8
     }
 }

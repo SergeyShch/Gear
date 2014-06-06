@@ -1,26 +1,26 @@
-﻿namespace TopTeam.Gear.Model
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
+
+namespace TopTeam.Gear.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Windows.Forms;
-
-
-    public class WebAction : Action
+    public class CopyToClipboardAction : Action
     {
-        private string Url
+        private string Text
         {
             get
             {
                 string val;
-                return this.Params.TryGetValue(ActionParam.Url, out val) ? val : string.Empty;
+                return this.Params.TryGetValue(ActionParam.Copy, out val) ? val : string.Empty;
             }
         }
+
         /// <summary>
         /// Constructor that only call a base constructor
         /// </summary>
         /// <param name="param"></param>
-        public WebAction(Dictionary<ActionParam, string> param)
+        public CopyToClipboardAction(Dictionary<ActionParam, string> param)
             : base(param)
         {
         }
@@ -31,24 +31,17 @@
         /// <param name="e"></param>
         protected override void Execute(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(this.Url))
-            {
-                MessageBox.Show(
-                    "URL of site not found. Please fill in a URL adress of site in a config file. "); 
-            }
-            else
-            {
-                Process.Start(this.Url);
-            }
+            Clipboard.SetText(this.Text);
         }
+
         /// <summary>
-        /// Type of action from enum - Website. 
+        /// Type of action from enum - Clipboard. 
         /// </summary>
         public override ActionType Type
         {
             get
             {
-                return ActionType.Website;
+                return ActionType.Copy;
             }
         }
     }

@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="Model\ActionParam.cs" />
     <Compile Include="Model\ConsoleAction.cs" />
+    <Compile Include="Model\CopyToClipboardAction.cs" />
     <Compile Include="Model\DirAction.cs" />
     <Compile Include="Model\EmailAction.cs" />
     <Compile Include="Model\ExeAction.cs" />
@@ -107,6 +108,9 @@
     <EmbeddedResource Include="Icons\RDC.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Copy.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Icons\Developer.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -125,7 +129,6 @@
     <EmbeddedResource Include="Icons\Console.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Tree.gear">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
