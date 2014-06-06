@@ -30,7 +30,14 @@
         /// <param name="e"></param>
         protected override void Execute(object sender, EventArgs e)
         {
-            Process.Start(this.Url);
+            if (string.IsNullOrWhiteSpace(this.Url))
+            {
+                throw new Exception("Fill in a url of site in a config file."); 
+            }
+            else
+            {
+                Process.Start(this.Url);
+            }
         }
         /// <summary>
         /// Type of action from enum - Website. 
