@@ -1,7 +1,9 @@
-﻿<Root StartX="mouse" StartY="200" Selected="2">
-  
+﻿<Root StartX="mouse" StartY="200" Selected="0">
+
   <Root Name="Sites">
     <WebSite Name="Google" Url="https://www.google.ru/"/>
+    <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
+    <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
   </Root>
 
   <Root Name="RDC">
@@ -10,22 +12,32 @@
   </Root>
 
   <Root Name="CMD">
-    <Console Name="ping 192.168.19.10" Command="ping 192.168.19.10" Close="false"/>
+    <Console Name="ping 8.8.8.8 -t" Command="ping 8.8.8.8 -t" Close="false"/>
+    <Console Name="tracert 8.8.8.8" Command="tracert 8.8.8.8" Close="false"/>
+    <Console Name="mstsc" Command="mstsc" Close="true"/>
     <Console Name="iisreset" Command="iisreset" Close="true" />
   </Root>
 
   <Root Name="Directories">
-    <Dir Name="Photo" Path="\\pub\Video&amp;photos" />
+    <Dir Name="FileServer" Path="\\fs\" />
+    <Dir Name="Photo" Path="\\fs\Video&amp;photos" />
     <Dir Name="Gear home" />
   </Root>
 
   <Root Name="Emails">
-    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!" 
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
            Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
   </Root>
 
   <Root Name="Programs">
-    <Exe Name="Open solution in VS" Path="&quot;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe&quot;" Args="&quot;D:\Open3\Source\AllProjects.sln&quot;" />
+    <Exe Name="Outlook 2013" Path= "outlook" />
+    <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Chrome" Path="Chrome" />
+
   </Root>
 
   <Root Name="Copy">

@@ -7,7 +7,7 @@ namespace TopTeam.Gear.Model
 {
     public class CopyToClipboardAction : Action
     {
-        private int quickNumber = 1;
+        private static int quickNumber = 1;
         private string Text
         {
             get
@@ -50,9 +50,7 @@ namespace TopTeam.Gear.Model
         public override int QuickNumber
         {
             get
-            {
-                return this.quickNumber++;
-            }
+            { return CopyToClipboardAction.quickNumber++; }
             
         }
     }

@@ -9,7 +9,7 @@ namespace TopTeam.Gear.Model
 
     public class RemoteDesktopAction : Action
     {
-        private int quickNumber = 1;
+        private static int quickNumber = 1;
         /// <summary>
         /// Constructor that only call a base constructor
         /// </summary>
@@ -81,9 +81,7 @@ namespace TopTeam.Gear.Model
         public override int QuickNumber
         {
             get
-            {
-                return this.quickNumber++;
-            }
+            { return RemoteDesktopAction.quickNumber++; }
            
         }
     }

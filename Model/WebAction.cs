@@ -8,7 +8,7 @@
 
     public class WebAction : Action
     {
-        private int quickNumber = 0;
+        private static int quickNumber = 1;
         private string Url
         {
             get
@@ -56,9 +56,7 @@
         public override int QuickNumber
         {
             get
-            {
-                return this.quickNumber++;
-            }
+            { return  WebAction.quickNumber++; }
             
         }
     }

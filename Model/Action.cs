@@ -27,7 +27,7 @@ namespace TopTeam.Gear.Model
             
             get
             {                
-                return string.Format("{0}. {1}",1, this.Params.ContainsKey(ActionParam.Name) ? this.Params[ActionParam.Name] : string.Empty);
+                return string.Format("{0}. {1}",this.QuickNumber, this.Params.ContainsKey(ActionParam.Name) ? this.Params[ActionParam.Name] : string.Empty);
             }
         }
         /// <summary>

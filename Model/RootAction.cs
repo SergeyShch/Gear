@@ -7,7 +7,7 @@ namespace TopTeam.Gear.Model
 
     public class RootAction : Action
     {
-        private int quickNumber = 1;
+        private static int quickNumber = 1;
         public string StartX
         {
             get
@@ -66,9 +66,7 @@ namespace TopTeam.Gear.Model
         public override int QuickNumber
         {
             get
-            {
-                return this.quickNumber++; ;
-            }
+            { return RootAction.quickNumber++; }
         }
     }
 }
