@@ -4,14 +4,41 @@
     <WebSite Name="Google" Url="https://www.google.ru/"/>
     <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
     <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
+    <WebSite Name="Google" Url="https://www.google.ru/"/>
+    <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
+    <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
+    <WebSite Name="Google" Url="https://www.google.ru/"/>
+    <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
+    <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
+    <WebSite Name="Google" Url="https://www.google.ru/"/>
+    <WebSite Name="Gear at Sergey's github" Url="https://github.com/SergeyShch/Gear"/>
+    <WebSite Name="Gear at my github" Url="https://github.com/roman-dudin/Gear"/>
   </Root>
 
   <Root Name="RDC">
     <RDC Name="Alex CRM" Address="192.168.19.141" Login="CONTOSO\administrator" Password="pass@word1" />
     <RDC Name="Conflicts1" Address="conflicts1" />
+    <RDC Name="Alex CRM" Address="192.168.19.141" Login="CONTOSO\administrator" Password="pass@word1" />
+    <RDC Name="Conflicts1" Address="conflicts1" />
+    <RDC Name="Alex CRM" Address="192.168.19.141" Login="CONTOSO\administrator" Password="pass@word1" />
+    <RDC Name="Conflicts1" Address="conflicts1" />
+    <RDC Name="Alex CRM" Address="192.168.19.141" Login="CONTOSO\administrator" Password="pass@word1" />
+    <RDC Name="Conflicts1" Address="conflicts1" />
+    <RDC Name="Alex CRM" Address="192.168.19.141" Login="CONTOSO\administrator" Password="pass@word1" />
+    <RDC Name="Conflicts1" Address="conflicts1" />
+    <RDC Name="Alex CRM" Address="192.168.19.141" Login="CONTOSO\administrator" Password="pass@word1" />
+    <RDC Name="Conflicts1" Address="conflicts1" />
   </Root>
 
   <Root Name="CMD">
+    <Console Name="ping 8.8.8.8 -t" Command="ping 8.8.8.8 -t" Close="false"/>
+    <Console Name="tracert 8.8.8.8" Command="tracert 8.8.8.8" Close="false"/>
+    <Console Name="mstsc" Command="mstsc" Close="true"/>
+    <Console Name="iisreset" Command="iisreset" Close="true" />
+    <Console Name="ping 8.8.8.8 -t" Command="ping 8.8.8.8 -t" Close="false"/>
+    <Console Name="tracert 8.8.8.8" Command="tracert 8.8.8.8" Close="false"/>
+    <Console Name="mstsc" Command="mstsc" Close="true"/>
+    <Console Name="iisreset" Command="iisreset" Close="true" />
     <Console Name="ping 8.8.8.8 -t" Command="ping 8.8.8.8 -t" Close="false"/>
     <Console Name="tracert 8.8.8.8" Command="tracert 8.8.8.8" Close="false"/>
     <Console Name="mstsc" Command="mstsc" Close="true"/>
@@ -22,9 +49,42 @@
     <Dir Name="FileServer" Path="\\fs\" />
     <Dir Name="Photo" Path="\\fs\Video&amp;photos" />
     <Dir Name="Gear home" />
+    <Dir Name="FileServer" Path="\\fs\" />
+    <Dir Name="Photo" Path="\\fs\Video&amp;photos" />
+    <Dir Name="Gear home" />
+    <Dir Name="FileServer" Path="\\fs\" />
+    <Dir Name="Photo" Path="\\fs\Video&amp;photos" />
+    <Dir Name="Gear home" />
+    <Dir Name="FileServer" Path="\\fs\" />
+    <Dir Name="Photo" Path="\\fs\Video&amp;photos" />
+    <Dir Name="Gear home" />
   </Root>
 
   <Root Name="Emails">
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
+    <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
+           Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
     <Email Name="To ivanovo team" To="team@yeah.com" Subject="Hello!!!"
            Body="Hello guys,%0D%0A%0D%0AThanks,%0D%0ASergey" />
   </Root>
@@ -37,10 +97,25 @@
     <Exe Name="Chrome" Path="Chrome" />
     <Exe Name="Chrome" Path="Chrome" />
     <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Outlook 2013" Path= "outlook" />
+    <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Chrome" Path="Chrome" />
+    <Exe Name="Chrome" Path="Chrome" />
 
   </Root>
 
   <Root Name="Copy">
+    <Copy Name="GitPass" Copy="qwerty"/>
+    <Copy Name="My Email" Copy="roman.dudin@akvelon.com"/>
+    <Copy Name="My Skype" Copy="roman.dudinn"/>
+    <Copy Name="URL of Gear project at GitHub" Copy="https://github.com/roman-dudin/Gear"/>
+    <Copy Name="GitPass" Copy="qwerty"/>
+    <Copy Name="My Email" Copy="roman.dudin@akvelon.com"/>
+    <Copy Name="My Skype" Copy="roman.dudinn"/>
+    <Copy Name="URL of Gear project at GitHub" Copy="https://github.com/roman-dudin/Gear"/>
     <Copy Name="GitPass" Copy="qwerty"/>
     <Copy Name="My Email" Copy="roman.dudin@akvelon.com"/>
     <Copy Name="My Skype" Copy="roman.dudinn"/>

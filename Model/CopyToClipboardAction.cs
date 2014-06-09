@@ -50,7 +50,10 @@ namespace TopTeam.Gear.Model
         public override int QuickNumber
         {
             get
-            { return CopyToClipboardAction.quickNumber++; }
+            {
+                if (CopyToClipboardAction.quickNumber < 10) return CopyToClipboardAction.quickNumber++;
+                else return 0;
+            }
             
         }
     }

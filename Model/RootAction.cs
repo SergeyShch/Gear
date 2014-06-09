@@ -66,7 +66,10 @@ namespace TopTeam.Gear.Model
         public override int QuickNumber
         {
             get
-            { return RootAction.quickNumber++; }
+            {
+                if (RootAction.quickNumber < 10) return RootAction.quickNumber++;
+                else return 0;
+            }
         }
     }
 }

@@ -120,7 +120,11 @@ namespace TopTeam.Gear.Model
 
         public override int QuickNumber
         {
-            get { return EmailAction.quickNumber++; }
+            get
+            {
+                if (EmailAction.quickNumber < 10) return EmailAction.quickNumber++;
+                else return 0;
+            }
         }
     }
 }

@@ -81,8 +81,10 @@ namespace TopTeam.Gear.Model
         public override int QuickNumber
         {
             get
-            { return RemoteDesktopAction.quickNumber++; }
-           
+            {
+                if (RemoteDesktopAction.quickNumber < 10) return RemoteDesktopAction.quickNumber++;
+                else return 0;
+            }
         }
     }
 }

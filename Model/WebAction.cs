@@ -56,8 +56,10 @@
         public override int QuickNumber
         {
             get
-            { return  WebAction.quickNumber++; }
-            
+            {
+                if (WebAction.quickNumber < 10) return WebAction.quickNumber++;
+                else return 0;
+            }
         }
     }
 }
