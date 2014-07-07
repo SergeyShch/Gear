@@ -122,8 +122,12 @@ namespace TopTeam.Gear.Model
         {
             get
             {
-                if (EmailAction.quickNumber < 10) return EmailAction.quickNumber++;
+                if (EmailAction.quickNumber < 10) return EmailAction.quickNumber;
                 else return 0;
+            }
+            set
+            {
+                quickNumber = value;
             }
         }
     }

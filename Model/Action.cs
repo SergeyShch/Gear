@@ -13,7 +13,7 @@ namespace TopTeam.Gear.Model
     /// </summary>
     public abstract class Action
     {
-        public abstract int QuickNumber { get; }
+        public abstract int QuickNumber { get; set; }
         /// <summary>
         /// Abstract readonly field from enum ActionType
         /// </summary>
@@ -24,10 +24,17 @@ namespace TopTeam.Gear.Model
         
         public string Name
         {
-            
             get
-            {                
-                return string.Format("{0}. {1}",this.QuickNumber, this.Params.ContainsKey(ActionParam.Name) ? this.Params[ActionParam.Name] : string.Empty);
+            {
+                if (Settings.NumControlEnable)
+                {
+                    if (this.QuickNumber == 0)
+                    {
+                        return this.Params.ContainsKey(ActionParam.Name) ? this.Params[ActionParam.Name] : string.Empty;
+                    }
+                    return string.Format("{0}. {1}", this.QuickNumber++, this.Params.ContainsKey(ActionParam.Name) ? this.Params[ActionParam.Name] : string.Empty);
+                }
+                return this.Params.ContainsKey(ActionParam.Name) ? this.Params[ActionParam.Name] : string.Empty;
             }
         }
         /// <summary>
@@ -56,7 +63,6 @@ namespace TopTeam.Gear.Model
         {
             try
             {
-                
                 Program.HandledTurnOFf = true;
                 this.Execute(sender, e);
             }

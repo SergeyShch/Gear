@@ -51,8 +51,12 @@ namespace TopTeam.Gear.Model
         {
             get
             {
-                if (CopyToClipboardAction.quickNumber < 10) return CopyToClipboardAction.quickNumber++;
+                if (CopyToClipboardAction.quickNumber < 10) return CopyToClipboardAction.quickNumber;
                 else return 0;
+            }
+            set
+            {
+                quickNumber = value;
             }
             
         }

@@ -18,6 +18,7 @@ namespace TopTeam.Gear.Model
         private int startY = 150;
 
         private int selectedIndex = 0;
+
         /// <summary>
         /// Default constructor
         /// </summary>
@@ -113,7 +114,7 @@ namespace TopTeam.Gear.Model
                 this.SelectedIndex = i;
             }
         }
-
+        
         public List<ToolStripItem> MenuItems { get; set; }
         
         /// <summary>

@@ -45,6 +45,8 @@ namespace TopTeam.Gear.Model
 
         Selected = 17,
 
-        Copy = 18
+        Copy = 18,
+
+        NumControlEnable = 19
     }
 }

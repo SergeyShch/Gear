@@ -59,8 +59,12 @@ namespace TopTeam.Gear.Model
         {
             get
             {
-                if (DirAction.quickNumber < 10) return DirAction.quickNumber++;
+                if (DirAction.quickNumber < 10) return DirAction.quickNumber;
                 else return 0;
+            }
+            set
+            {
+                quickNumber = value;
             }
         }
     }

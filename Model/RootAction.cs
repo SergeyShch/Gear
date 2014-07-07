@@ -34,6 +34,14 @@ namespace TopTeam.Gear.Model
                 return this.Params.TryGetValue(ActionParam.Selected, out val) ? val : string.Empty;
             }
         }
+        public string NumControlEnable
+        {
+            get
+            {
+                string val;
+                return this.Params.TryGetValue(ActionParam.NumControlEnable, out val) ? val : string.Empty;
+            }
+        }
         /// <summary>
         /// Constructor that only call a base constructor
         /// </summary>
@@ -67,8 +75,12 @@ namespace TopTeam.Gear.Model
         {
             get
             {
-                if (RootAction.quickNumber < 10) return RootAction.quickNumber++;
+                if (RootAction.quickNumber < 10) return RootAction.quickNumber;
                 else return 0;
+            }
+            set
+            {
+                quickNumber = value;
             }
         }
     }

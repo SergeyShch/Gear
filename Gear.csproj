@@ -89,6 +89,7 @@
     <Compile Include="Model\ExeAction.cs" />
     <Compile Include="Model\GearDefinition.cs" />
     <Compile Include="Model\RootAction.cs" />
+    <Compile Include="Model\Settings.cs" />
     <Compile Include="Utility\AttachIcon.cs" />
     <Compile Include="Model\Action.cs" />
     <Compile Include="Model\ActionFactory.cs" />

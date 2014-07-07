@@ -68,8 +68,12 @@ namespace TopTeam.Gear.Model
         {
             get
             {
-                if (ConsoleAction.quickNumber < 10) return ConsoleAction.quickNumber++;
+                if (ConsoleAction.quickNumber < 10) return ConsoleAction.quickNumber;
                 else return 0;
+            }
+            set
+            {
+                quickNumber = value;
             }
         }
     }

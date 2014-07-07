@@ -1,4 +1,4 @@
-﻿<Root StartX="mouse" StartY="200" Selected="0">
+﻿<Root StartX="mouse" StartY="200" Selected="0" NumControlEnable="true">
 
   <Root Name="Sites">
     <WebSite Name="Google" Url="https://www.google.ru/"/>
@@ -42,7 +42,7 @@
     <Console Name="ping 8.8.8.8 -t" Command="ping 8.8.8.8 -t" Close="false"/>
     <Console Name="tracert 8.8.8.8" Command="tracert 8.8.8.8" Close="false"/>
     <Console Name="mstsc" Command="mstsc" Close="true"/>
-    <Console Name="iisreset" Command="iisreset" Close="true" />
+    <Console Name="Lock" Command="Rundll32.exe User32.dll,LockWorkStation" Close="true" />
   </Root>
 
   <Root Name="Directories">

@@ -57,8 +57,12 @@
         {
             get
             {
-                if (WebAction.quickNumber < 10) return WebAction.quickNumber++;
+                if (WebAction.quickNumber < 10) return WebAction.quickNumber;
                 else return 0;
+            }
+            set
+            {
+                quickNumber = value;
             }
         }
     }

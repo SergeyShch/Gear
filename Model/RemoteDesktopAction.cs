@@ -82,8 +82,12 @@ namespace TopTeam.Gear.Model
         {
             get
             {
-                if (RemoteDesktopAction.quickNumber < 10) return RemoteDesktopAction.quickNumber++;
+                if (RemoteDesktopAction.quickNumber < 10) return RemoteDesktopAction.quickNumber;
                 else return 0;
+            }
+            set
+            {
+                quickNumber = value;
             }
         }
     }
