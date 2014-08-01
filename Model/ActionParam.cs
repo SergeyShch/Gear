@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TopTeam.Gear.Model
 {
+    /// <summary>
+    /// Enum of parameters, that can be used in app
+    /// </summary>
     public enum ActionParam
     {
         Name = 1,
@@ -40,6 +43,10 @@ namespace TopTeam.Gear.Model
 
         StartY = 16,
 
-        Selected = 17
+        Selected = 17,
+
+        Copy = 18,
+
+        NumControlEnable = 19
     }
 }

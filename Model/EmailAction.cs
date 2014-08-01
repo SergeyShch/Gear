@@ -8,8 +8,15 @@ namespace TopTeam.Gear.Model
 {
     using System.Diagnostics;
 
+    /// <summary>
+    /// Sends email to given recipients with provided Subject and Body.
+    /// </summary>
+    /// <remarks>
+    /// 
+    /// </remarks>
     internal class EmailAction : Action
     {
+        private static int quickNumber = 1;
         private string Subject
         {
             get
@@ -53,12 +60,19 @@ namespace TopTeam.Gear.Model
                 return this.Params.TryGetValue(ActionParam.Body, out val) ? val : string.Empty;
             }
         }
-
+        /// <summary>
+        /// Constructor that only call a base constructor
+        /// </summary>
+        /// <param name="param"></param>
         public EmailAction(Dictionary<ActionParam, string> param)
             : base(param)
         {
         }
-
+        /// <summary>
+        /// Overrided execute method, that starts the process mailto: with provided optional parameters. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected override void Execute(object sender, EventArgs e)
         {
             string mail = "mailto:" + this.To;
@@ -96,10 +110,25 @@ namespace TopTeam.Gear.Model
 
             Process.Start(mail);
         }
-
+        /// <summary>
+        /// Type of action from enum - Email. 
+        /// </summary>
         public override ActionType Type
         {
             get { return ActionType.Email; }
+        }
+
+        public override int QuickNumber
+        {
+            get
+            {
+                if (EmailAction.quickNumber < 10) return EmailAction.quickNumber;
+                else return 0;
+            }
+            set
+            {
+                quickNumber = value;
+            }
         }
     }
 }

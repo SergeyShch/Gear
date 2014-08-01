@@ -83,11 +83,13 @@
   <ItemGroup>
     <Compile Include="Model\ActionParam.cs" />
     <Compile Include="Model\ConsoleAction.cs" />
+    <Compile Include="Model\CopyToClipboardAction.cs" />
     <Compile Include="Model\DirAction.cs" />
     <Compile Include="Model\EmailAction.cs" />
     <Compile Include="Model\ExeAction.cs" />
     <Compile Include="Model\GearDefinition.cs" />
     <Compile Include="Model\RootAction.cs" />
+    <Compile Include="Model\Settings.cs" />
     <Compile Include="Utility\AttachIcon.cs" />
     <Compile Include="Model\Action.cs" />
     <Compile Include="Model\ActionFactory.cs" />
@@ -105,6 +107,9 @@
   <ItemGroup>
     <Content Include="Developer.ico" />
     <EmbeddedResource Include="Icons\RDC.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Copy.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="Icons\Developer.ico">

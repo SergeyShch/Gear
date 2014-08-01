@@ -14,17 +14,18 @@
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
 
             var menuStrip = new ContextMenuStrip();
-
+            
             var gear = Parser.ReadConfigs();
             if (gear == null || gear.MenuItems == null || gear.MenuItems.Count == 0)
             {
                 TurnOffAsync();
-                return;
+                return;                                                                       
             }
 
             menuStrip.Items.AddRange(gear.MenuItems.ToArray());
@@ -41,7 +42,9 @@
         {
             TurnOffAsync();
         }
-
+        /// <summary>
+        /// Turn off the application
+        /// </summary>
         public static void TurnOff()
         {
             Application.Exit();
@@ -59,7 +62,9 @@
                     }
                 });
         }
-
+        /// <summary>
+        /// Used to turn off application if there is no any action is active (for example if pressed alt+tab)
+        /// </summary>
         public static bool HandledTurnOFf = false;
     }
 }

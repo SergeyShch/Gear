@@ -11,6 +11,7 @@ namespace TopTeam.Gear.Model
 
     public class ConsoleAction : Action
     {
+        private static int quickNumber = 1;
         string Command
         {
             get
@@ -35,22 +36,44 @@ namespace TopTeam.Gear.Model
                 return false;
             }
         }
-
+        /// <summary>
+        /// Constructor that only call a base constructor
+        /// </summary>
+        /// <param name="param"></param>
         public ConsoleAction(Dictionary<ActionParam, string> param)
             : base(param)
         {
         }
-
+        /// <summary>
+        /// Overrided execute method, that starts a process cmd.exe with comand-line args. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected override void Execute(object sender, EventArgs e)
         {
             Process.Start("cmd.exe", string.Format("{0} {1}", this.ShouldCloseWindow ? "/C" : "/K", this.Command));
         }
-
+        /// <summary>
+        /// Type of action from enum - Console. 
+        /// </summary>
         public override ActionType Type
         {
             get
             {
                 return ActionType.Console;
+            }
+        }
+
+        public override int QuickNumber
+        {
+            get
+            {
+                if (ConsoleAction.quickNumber < 10) return ConsoleAction.quickNumber;
+                else return 0;
+            }
+            set
+            {
+                quickNumber = value;
             }
         }
     }
